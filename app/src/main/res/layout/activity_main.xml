@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:id="@+id/search_view"
+        android:queryHint="Search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="5dp"
+        android:background="@drawable/zd_bg_rounded_input_field"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_view" />
+
+    <ProgressBar
+        android:id="@+id/progress_Bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:indeterminate = "true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:max="100"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:progress="0" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/no_data_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/no_data"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_centerInParent="true"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
